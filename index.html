@@ -21,6 +21,7 @@
             embedded
             gesture-detector
         >
+	
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -51,8 +52,33 @@
             <a-entity camera></a-entity>
 		
         </a-scene>
-        	onload="Nunu.App.loadApp('app.nsp', 'canvas')">
-			<canvas width="1680" height="1050" id="canvas" position:absolute></canvas>
+	      <canvas id="canvas"></canvas>
+        	var app, canvas;
+
+//Should be called after page load
+function initialize()
+{
+//Get the canvas that will be used to draw content
+canvas = document.getElementById("canvas");
+
+//Create new app intance
+app = new Nunu.App(canvas);
+
+//Load and run the "app.nsp" file
+app.loadRunProgram("app.nsp");
+}
+
+//Should be called every time the window is resized
+function resize()
+{
+//Update canvas width and height attributes
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+//Resize app
+app.resize();
+}
+onload="initialize();" onresize="resize();	  
 	   
     </body>
 </html>
