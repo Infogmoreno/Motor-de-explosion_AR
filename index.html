@@ -18,7 +18,10 @@
             border-radius: 5px;
             padding: 5px;
             border: none;
-                
+            position: relative;
+            left: 50%;
+            bottom: 15%;
+            z-index 9999;
             }
         </style>
     </head>
@@ -32,6 +35,15 @@
             id="scene"
             embedded
             gesture-detector
+            renderer="antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: false;
+                   maxCanvasWidth: 1920;
+                   maxCanvasHeight: 1920;"
+             webxr="requiredFeatures: hit-test,local-floor;
+                optionalFeatures: dom-overlay,unbounded;
+                overlayElement: #overlay;"
         >
             <a-assets>
                 <a-asset-item
