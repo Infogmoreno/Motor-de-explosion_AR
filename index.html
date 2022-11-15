@@ -103,5 +103,21 @@
                 <button id="btn_extract" class="boton" type="button">Máquina extractora</button>
             </div>
         </div>
+       <script>
+             const btn_motor = document.querySelector('#btn_motor');
+             const btn_extract = document.querySelector('#btn_extract');
+             const motor = document.querySelector('#motorexplosion');
+             const maqu_extract = document.querySelector('#maq-extract');
+                                                                    
+             btn_motor.addEventListener('mouseenter', function(){
+                motor.setAttribute('visible', true);
+                maqu_extract.setAttribute('visible', false);                                                      
+             });
+              
+             btn_extract.addEventListener('mouseenter', function(){
+                motor.setAttribute('visible', false);
+                maqu_extract.setAttribute('visible', true);                                                      
+             });
+      </script>                                                             
     </body>
 </html>
