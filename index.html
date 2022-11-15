@@ -11,6 +11,7 @@
         body{
            width: 100%;
            height: 100%;
+           z-index: -1;
             }
         #btn_motor{
               background-color: #B6AF97;
@@ -89,7 +90,7 @@
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
-                    gesture-handler
+                    
                     visible="true"
                 ></a-entity>
                 
@@ -100,7 +101,7 @@
                     animation-mixer="loop: repeat"
                     gltf-model="#maquinaectractora"
                     class="clickable"
-                    gesture-handler
+                    
                     visible="false"
                 ></a-entity>
             
@@ -110,7 +111,7 @@
         <div
            id="overlay">
             <div
-              id="botones" class="botones style='position: fixed; bottom: 20px; width:100%; text-align: center; z-index: 1;'>
+              id="botones" class="botones style='position: relative; bottom: 20px; width:100%; text-align: center; z-index: 9999;'>
                 <button id="btn_motor" class="boton" type="button">Motor explosión</button>
                 <button id="btn_extract" class="boton" type="button">Máquina extractora</button>
             </div>
