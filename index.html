@@ -12,21 +12,41 @@
            width: 100%;
            height: 100%;
             }
-       .boton{
-            background-color: rgb(80 85 90);
-            color: white;
-            opacity: 1;
-            border-radius: 5px;
-            padding: 5px;
-            border: none;
-            position: relative;
-            left: 50%;
-            bottom: 15%;
-            z-index 9999;
-            }
-            .boton:hover{
-            opacity: 0.5;
-            }
+        #btn_motor{
+              background-color: #B6AF97;
+              opacity:1	
+              border: none;
+              color: white;
+              padding: 6px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 10px;
+              font-family:Arial;
+              margin: 6px 8px;
+              cursor: pointer;
+              border-radius: 6px;
+              border: none;
+              }
+            .boton{
+              opacity:0.5;
+            }  
+          #btn_extract{
+              background-color: #B6AF97;
+              opacity:1	
+              border: none;
+              color: white;
+              padding: 6px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 10px;
+              font-family:Arial;
+              margin: 6px 8px;
+              cursor: pointer;
+              border-radius: 6px;
+              border: none;
+              }  
             
         </style>
     </head>
@@ -98,7 +118,7 @@
         <div
            id="overlay">
             <div
-              id="botones" class="botones>
+              id="botones" class="botones style='position: fixed; bottom: 20px; width:100%; text-align: center; z-index: 1;'>
                 <button id="btn_motor" class="boton" type="button">Motor explosión</button>
                 <button id="btn_extract" class="boton" type="button">Máquina extractora</button>
             </div>
