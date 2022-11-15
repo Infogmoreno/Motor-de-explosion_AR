@@ -53,6 +53,13 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
+        
+         <div id="overlay">
+            <div id="botones" class="botones" style="position: relative; bottom: 20px; width:100%; text-align: center; z-index: 9999;">
+                <button id="btn_motor" class="boton" type="button">Motor explosión</button>
+                <button id="btn_extract" class="boton" type="button">Máquina extractora</button>
+            </div>
+        </div>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
@@ -108,14 +115,7 @@
 
             <a-entity camera></a-entity>
         </a-scene>
-        <div
-           id="overlay">
-            <div
-              id="botones" class="botones style='position: relative; bottom: 20px; width:100%; text-align: center; z-index: 9999;'>
-                <button id="btn_motor" class="boton" type="button">Motor explosión</button>
-                <button id="btn_extract" class="boton" type="button">Máquina extractora</button>
-            </div>
-        </div>
+       
        <script type="text/javascript">
              const btn_motor = document.querySelector('#btn_motor');
              const btn_extract = document.querySelector('#btn_extract');
