@@ -98,7 +98,8 @@
                     position="0 -1.5 0"
                     scale="0.65 0.65 0.65"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"                    
+                    gltf-model="#animated-asset"
+                    shadow="cast: true; receive: true"      
                     visible="false"
                 ></a-entity>
                 
@@ -108,18 +109,21 @@
                     rotation="0 90 0"      
                     scale="0.55 0.55 0.55"
                     animation-mixer="loop: repeat"
-                    gltf-model="#maquinaectractora"                    
+                    gltf-model="#maquinaectractora"
+                    shadow="cast: true; receive: true"      
                     visible="true"
                 ></a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
             <a-entity id="light_ambient"
-                      light="type: hemisphere; intensity:0.3"
-                      position="0 0 0"></a-entity>
+                      light="type: hemisphere; intensity:0.4"
+                      position="0 0 0"
+                      shadow="cast: false; receive: false"></a-entity>
             <a-entity id="light_directional"
                       light="type: directional; target: #maq-extract; intensity: 4"
-                      position="-0.5 5 -1"></a-entity>
+                      position="-0.5 5 -1"
+                      shadow="cast: true; receive: false"></a-entity>
         </a-scene>
        
        <script type="text/javascript">
